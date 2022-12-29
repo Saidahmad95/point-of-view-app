@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 228mir18
+    url: jdbc:mysql://localhost:3306/newpointofviewapp
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use: false
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  mail:
+    host: smtp.mailtrap.io
+    password: fa3539e90b4336
+    port: 25
+    protocol: smtp
+    username: a83099fddc45cb
+
+jwt:
+  publicKey: classpath:app.pub
+  privateKey: classpath:app.key
+  expirationInMillis: 90000
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
